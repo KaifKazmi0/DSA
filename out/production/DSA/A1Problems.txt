@@ -1,0 +1,5 @@
+Problem based on two pointers
+1. sort an array consisting of 0s and 1s (TWO methods)
+2. sort an array to move all even nums at the starting
+3. return an array of the square of each nums sorted in non-decreasing order(hint math.abs)
+4. prefix sums
