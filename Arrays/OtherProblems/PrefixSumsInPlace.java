@@ -2,16 +2,12 @@ package Arrays.OtherProblems;
 
 import java.util.Arrays;
 
-
-public class PrefixSums {
+public class PrefixSumsInPlace {
     public static void main(String[] args) {
         int arr[] = {1,5,7,8,4};
-        int pref[] = new int[arr.length];
-        pref[0] = arr[0];
         for(int i=1;i<arr.length;i++){
-            pref[i] = pref[i-1]+arr[i];
+            arr[i] = arr[i-1]+arr[i];
         }
-        System.out.println(Arrays.toString(pref));
+        System.out.println(Arrays.toString(arr));
     }
 }
-
