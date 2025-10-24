@@ -3,4 +3,22 @@ Problem based on two pointers
 2. sort an array to move all even nums at the starting
 //yaha se start karna
 3. return an array of the square of each nums sorted in non-decreasing order(hint math.abs)
-4. prefix sums
+
+
+
+
+date 23rd oct 2025
+1. prefix sum
+2. partition problem
+3. 2d array input
+4. 2d array addition
+5. 2d array multiplication
+
+date 24th oct 2025
+1.Transpose and rotate user entered matrix
+2. spiral order traversal
+3. Generate matrix in spiral order 1 to n^2
+4.Sum of rectangle
+  a.Brute force method
+  b.pre-calc the horizontal sum for each row
+  c.using prefix sum over both rows and cols

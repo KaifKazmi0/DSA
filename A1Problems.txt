@@ -15,10 +15,12 @@ date 23rd oct 2025
 5. 2d array multiplication
 
 date 24th oct 2025
-1.Transpose user entered matrix
+1.Transpose and rotate user entered matrix
 2. spiral order traversal
-3. Generate matrix in spiral order
+3. Generate matrix in spiral order 1 to n^2
 4.Sum of rectangle
   a.Brute force method
+
+25th oct 2025
   b.pre-calc the horizontal sum for each row
   c.using prefix sum over both rows and cols
