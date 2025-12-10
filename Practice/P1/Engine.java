@@ -1,4 +1,4 @@
-package Practice;
+package Practice.P1;
 
 public interface Engine {
     default void engineStart(){

@@ -1,4 +1,4 @@
-package Practice;
+package Practice.P1;
 
 public  class Car extends Vehicle implements Engine {
     //Vehicle vh = new Vehicle(); -> not allowed to create instance or object of Abstract class
@@ -6,6 +6,12 @@ public  class Car extends Vehicle implements Engine {
     void start() {
         System.out.println("Car started");
     }
+
+    @Override
+    void brake(){
+        super.brake();
+    }
+
 
     @Override
     void stop() {

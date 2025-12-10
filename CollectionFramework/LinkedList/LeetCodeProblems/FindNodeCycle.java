@@ -1,6 +1,6 @@
 package CollectionFramework.LinkedList.LeetCodeProblems;
 
-public class DetectCycle {
+public class FindNodeCycle {
     public static class Node{
         int val;
         Node next;
@@ -11,17 +11,27 @@ public class DetectCycle {
 
 
     public static class LL{
-        boolean detectCycle(Node head){
+        Node detectCycleNode(Node head){
             Node slow = head;
             Node fast = head;
             while (fast!=null){
                 slow = slow.next;
-                if (fast.next == null) return false;
+                if (fast.next == null)  break;
                 fast = fast.next.next;
 
-                if(slow == fast) return true;
+                if(slow == fast){
+                    Node temp = head;
+                    while (temp!=slow){
+                        temp = temp.next;
+                        slow = slow.next;
+                    }
+                    return slow;
+                }
             }
-            return false;
+            // If fast reached the end
+//            if (fast == null || fast.next == null) return null;
+
+            return null;
         }
     }
 
@@ -48,7 +58,7 @@ public class DetectCycle {
 
 
         LL obj = new LL();
-        System.out.println(obj.detectCycle(a));
+        System.out.println(obj.detectCycleNode(a).val);
 
     }
 

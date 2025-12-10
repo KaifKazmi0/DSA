@@ -1,4 +1,4 @@
-package Practice;
+package Practice.P1;
 
 public abstract class Vehicle {
     abstract void start();
@@ -6,6 +6,7 @@ public abstract class Vehicle {
     void brake(){
         System.out.println("use Brake");
     }
+
 
     abstract void stop();
 

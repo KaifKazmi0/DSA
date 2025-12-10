@@ -1,6 +1,10 @@
-package CollectionFramework.LinkedList.LeetCodeProblems;
+package Practice.Collection;
 
-public class OddEvenLLFlag {
+import java.util.LinkedList;
+import java.util.List;
+
+public class ShallowCopy {
+
     public static class Node{
         int val;
         Node next;
@@ -19,38 +23,16 @@ public class OddEvenLLFlag {
             }
         }
 
-        Node oddEven(Node head){
-            Node temp = head;
-            Node O = new Node(0);
-            Node tempo = O;
-            Node E = new Node(0);
-            Node tempe = E;
-            boolean isOdd = true;
-//            this is the optimal method
-//            while (even != null && even.next != null) {
-//                odd.next = even.next;
-//                odd = odd.next;
-//                even.next = odd.next;
-//                even = even.next;
-//            }
-//            ye method optimal nhi h use pointer manipulation method
-//            while (temp!=null){
-//                if (isOdd){
-//                    tempo.next = temp;
-//                    tempo = tempo.next;
-//                    isOdd = false;
-//                }
-//                else {
-//                    tempe.next = temp;
-//                    tempe = tempe.next;
-//                    isOdd = true;
-//                }
-//                temp = temp.next;
-//            }
-//            tempo.next = E.next;
-//            tempe.next = null;
-//            head = O.next;
-            return head;
+        public Node deepCopyLL(Node head) {
+            Node x = new Node(0);
+            Node y = x;
+            while (head!=null){
+                Node z = new Node(head.val);
+                y.next = z;
+                y = y.next;
+                head = head.next;
+            }
+            return x.next;
         }
     }
 
@@ -70,9 +52,12 @@ public class OddEvenLLFlag {
         d.next = e;
         e.next = f;
 
+
         LL obj = new LL();
-        a = obj.oddEven(a);
+        Node x = obj.deepCopyLL(a);
         obj.display(a);
+        System.out.println();
+        obj.display(x);
 
     }
 }

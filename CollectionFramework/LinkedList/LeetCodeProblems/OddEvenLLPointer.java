@@ -1,6 +1,6 @@
 package CollectionFramework.LinkedList.LeetCodeProblems;
 
-public class OddEvenLL {
+public class OddEvenLLPointer {
     public static class Node{
         int val;
         Node next;
@@ -10,48 +10,36 @@ public class OddEvenLL {
 
     }
 
-    public static class LL{
+    public static class LL {
 
-        void display(Node head){
-            while (head!=null){
-                System.out.print(head.val+" ");
+        void display(Node head) {
+            while (head != null) {
+                System.out.print(head.val + " ");
                 head = head.next;
             }
         }
 
         Node oddEven(Node head){
             Node temp = head;
-            Node O = new Node(0);
-            Node tempo = O;
-            Node E = new Node(0);
-            Node tempe = E;
-            boolean isOdd = true;
-//            this is the optimal method
-//            while (even != null && even.next != null) {
-//                odd.next = even.next;
-//                odd = odd.next;
-//                even.next = odd.next;
-//                even = even.next;
-//            }
-//            ye method optimal nhi h use pointer manipulation method
-//            while (temp!=null){
-//                if (isOdd){
-//                    tempo.next = temp;
-//                    tempo = tempo.next;
-//                    isOdd = false;
-//                }
-//                else {
-//                    tempe.next = temp;
-//                    tempe = tempe.next;
-//                    isOdd = true;
-//                }
-//                temp = temp.next;
-//            }
-//            tempo.next = E.next;
-//            tempe.next = null;
-//            head = O.next;
-            return head;
+            Node Even = new Node(0);
+            Node Odd = new Node(0);
+            Node tempo = Odd;
+            Node tempe = Even;
+            while (temp!=null ){
+                tempo.next = temp;
+                temp = temp.next;
+                tempo = tempo.next;
+                if (temp==null) break;
+                tempe.next = temp;
+                temp = temp.next;
+                tempe = tempe.next;
+            }
+            tempe.next = null;
+            tempo.next = Even.next;
+            return Odd.next;
         }
+
+
     }
 
 
@@ -62,6 +50,7 @@ public class OddEvenLL {
          Node d = new  Node(4);
          Node e = new  Node(6);
          Node f = new  Node(5);
+         Node g = new Node(20);
 
 
         a.next = b;
@@ -69,6 +58,8 @@ public class OddEvenLL {
         c.next = d;
         d.next = e;
         e.next = f;
+        f.next = g;
+
 
         LL obj = new LL();
         a = obj.oddEven(a);

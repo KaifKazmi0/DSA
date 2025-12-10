@@ -2,7 +2,7 @@ package CollectionFramework.LinkedList.LeetCodeProblems;
 // calculate lenght and divide it by two method is not excepted
 //solve problem in one iteration
 // HINT use slow fast pointer
-public class MiddleElement {
+public class FindMiddleElement {
     public static class Node{
         int val;
         Node next;

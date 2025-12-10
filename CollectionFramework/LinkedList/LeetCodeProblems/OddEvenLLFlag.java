@@ -1,6 +1,6 @@
 package CollectionFramework.LinkedList.LeetCodeProblems;
 
-public class OddEvenLL {
+public class OddEvenLLFlag {
     public static class Node{
         int val;
         Node next;
@@ -73,6 +73,7 @@ public class OddEvenLL {
         LL obj = new LL();
         a = obj.oddEven(a);
         obj.display(a);
+
 
     }
 }

@@ -1,4 +1,4 @@
-package CollectionFramework.LinkedList.LeetCodeProblems;
+package Practice;
 
 
 public class RmvEndNthElement {
@@ -23,29 +23,29 @@ public class RmvEndNthElement {
             System.out.println();
         }
 
-
-
-        void rmv(Node head,int n){
+        Node rmv(Node Head,int n){
+            Node head = new Node(0);
+            head.next = Head;
             Node slow = head;
             Node fast = head;
-            for (int i=0;i<n;i++){
+
+            for (int i=0;i<n+1;i++){
                 fast = fast.next;
             }
 
-
             while(fast.next!=null){
-                fast = fast.next;
                 slow = slow.next;
+                fast = fast.next;
             }
             slow.next = slow.next.next;
 
-//            while(fast!=null){
-//                fast = fast.next;
-//                slow = slow.next;
-//            }
-//            slow.val = slow.next.val;
-//            slow.next = slow.next.next;
+
+            return head.next;
         }
+
+
+
+
     }
 
 
@@ -66,7 +66,7 @@ public class RmvEndNthElement {
 
         ll obj = new ll();
         obj.display(a);
-        obj.rmv(a,2);
+        a = obj.rmv(a,6);
         obj.display(a);
 
 
